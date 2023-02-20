@@ -9,8 +9,8 @@ function TodoForm() {
     e.preventDefault();
 
     const promise = databases.createDocument(
-      "63f0e490dec756660463",
-      "63f0e49bce0b7cf46337",
+      "63f3a9d103e1dd30b7a8",
+      "63f3aa102de0fd08041a",
       uuidv4(),
       { Todos: todo }
     );
@@ -18,6 +18,7 @@ function TodoForm() {
     promise.then(
       function (response) {
         console.log(response);
+        window.location.reload();
       },
 
       function (error) {
@@ -25,7 +26,8 @@ function TodoForm() {
       }
     );
 
-    window.location.reload();
+    setTodo("");
+    // window.location.reload(false);
     // e.target.reset();
   };
 
@@ -36,6 +38,7 @@ function TodoForm() {
           type="text"
           name=""
           id=""
+          value={todo}
           placeholder="Enter Todo"
           className="border p-2 w-2/3 rounded-md"
           onChange={(e) => {

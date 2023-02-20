@@ -8,8 +8,8 @@ function Todos() {
   useEffect(() => {
     setLoader(true);
     const getTodos = databases.listDocuments(
-      "63f0e490dec756660463",
-      "63f0e49bce0b7cf46337"
+      "63f3a9d103e1dd30b7a8",
+      "63f3aa102de0fd08041a"
     );
 
     getTodos.then(
@@ -28,21 +28,22 @@ function Todos() {
   //Delete Todo
   const deleteTodo = (id) => {
     const promise = databases.deleteDocument(
-      "63f0e490dec756660463",
-      "63f0e49bce0b7cf46337",
+      "63f3a9d103e1dd30b7a8",
+      "63f3aa102de0fd08041a",
       id
     );
 
     promise.then(
       function (response) {
         console.log(response);
+        window.location.reload();
       },
       function (error) {
         console.log(error);
       }
     );
 
-    window.location.reload();
+    // window.location.reload();
   };
 
   return (
