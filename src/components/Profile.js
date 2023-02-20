@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { account } from "../appwrite/appwriteConfig";
-import TodoForm from "./Todos";
-import Todos from "./TodoForm";
+import Todos from "./Todos";
+import TodoForm from "./TodoForm";
 
 function Profile() {
   const navigate = useNavigate();

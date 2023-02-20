@@ -12,7 +12,7 @@ function TodoForm() {
       "63f0e490dec756660463",
       "63f0e49bce0b7cf46337",
       uuidv4(),
-      { "Todos":todo, }
+      { Todos: todo }
     );
 
     promise.then(
@@ -30,29 +30,27 @@ function TodoForm() {
   };
 
   return (
-    <>
-      <div className="max-w-7xl mx-auto mt-10">
-        <form action="" className="flex justify-center mb-10">
-          <input
-            type="text"
-            name=""
-            id=""
-            placeholder="Enter Todo"
-            className="border p-2 w-2/3 rounded-md"
-            onChange={(e) => {
-              setTodo(e.target.value);
-            }}
-          />
-          <button
-            className="bg-purple-500 p-2 text-white ml-2 rounded-md"
-            type="submit"
-            onClick={handleSubmit}
-          >
-            Add Todo
-          </button>
-        </form>
-      </div>
-    </>
+    <div className="max-w-7xl mx-auto mt-10">
+      <form action="" className="flex justify-center mb-10">
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="Enter Todo"
+          className="border p-2 w-2/3 rounded-md"
+          onChange={(e) => {
+            setTodo(e.target.value);
+          }}
+        />
+        <button
+          className="bg-purple-500 p-2 text-white ml-2 rounded-md"
+          type="submit"
+          onClick={handleSubmit}
+        >
+          Add Todo
+        </button>
+      </form>
+    </div>
   );
 }
 
